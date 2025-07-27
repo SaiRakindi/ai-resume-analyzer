@@ -7,14 +7,13 @@ interface FileUploaderprops {
 }
 
 const FileUploader = ({ onFileSelect }: FileUploaderprops) => {
-  const onDrop = () =>
-    useCallback(
-      (acceptedFiles: File[]) => {
-        const file = acceptedFiles[0] || null;
-        onFileSelect?.(file);
-      },
-      [onFileSelect]
-    );
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0] || null;
+      onFileSelect?.(file);
+    },
+    [onFileSelect]
+  );
 
   const maxFileSize = 20 * 1024 * 1024; // 20 MB
 
