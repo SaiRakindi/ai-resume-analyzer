@@ -1,4 +1,3 @@
-import { prepareInstructions } from "constants";
 import React, { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router";
 import FileUploader from "~/components/FileUploader";
@@ -6,6 +5,7 @@ import Navbar from "~/components/Navbar";
 import { convertPdfToImage } from "~/lib/pdfToImage";
 import { usePuterStore } from "~/lib/puter";
 import { generateUUID } from "~/utils";
+import { prepareInstructions } from "../../constants";
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
