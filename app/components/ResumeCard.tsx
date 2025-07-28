@@ -11,7 +11,7 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
 
   useEffect(() => {
     const loadResume = async () => {
-      const blob = await fs.read("resume.imagePath");
+      const blob = await fs.read(imagePath);
 
       if (!blob) {
         console.error("Failed to load resume image");
@@ -19,7 +19,7 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
       }
 
       let url = URL.createObjectURL(blob);
-      setResumeUrl(imagePath);
+      setResumeUrl(url);
     };
 
     loadResume();
@@ -54,7 +54,7 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
         <div className="gradient-border animate-in fade-in duration-1000">
           <div className="w-full h-full">
             <img
-              src={imagePath}
+              src={resumeUrl}
               alt="resume"
               className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"
             />
