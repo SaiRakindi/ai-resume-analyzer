@@ -57,16 +57,16 @@ interface Feedback {
   };
 
   //structure change from the puter.js response
-  ats_compatibility: float;
-  ats_optimization_tips: string[];
-  content_quality: number;
-  detailed_feedback: string[];
-  final_recommendation: string;
-  format_and_design: string;
-  keyword_match_analysis: {
-    matched_keywords: string[];
-    missing_keywords: string[];
-    keyword_match_percentage: float;
-  };
-  overall_rating: float;
+  // ats_compatibility: float;
+  // ats_optimization_tips: string[];
+  // content_quality: number;
+  // detailed_feedback: string[];
+  // final_recommendation: string;
+  // format_and_design: string;
+  // keyword_match_analysis: {
+  //   matched_keywords: string[];
+  //   missing_keywords: string[];
+  //   keyword_match_percentage: float;
+  // };
+  // overall_rating: float;
 }
