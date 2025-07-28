@@ -4,8 +4,15 @@ import FileUploader from "~/components/FileUploader";
 import Navbar from "~/components/Navbar";
 import { convertPdfToImage } from "~/lib/pdfToImage";
 import { usePuterStore } from "~/lib/puter";
-import { generateUUID } from "~/utils";
+import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
+
+export function meta() {
+  return [
+    { title: "Upload Resume | Resumind" },
+    { name: "description", content: "Upload your resume for the AI analysis!" },
+  ];
+}
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
