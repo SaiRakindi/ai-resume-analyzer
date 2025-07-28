@@ -91,7 +91,7 @@ const Resume = () => {
               <Summary feedback={feedback} />
               <ATS
                 score={feedback?.ATS?.score || feedback.ats_compatibility}
-                suggestoins={feedback?.ATS?.tips || []}
+                suggestions={feedback?.ats_optimization_tips || []}
               />
               <Details feedback={feedback} />
             </div>

@@ -41,7 +41,7 @@ const Summary = ({ feedback }: any) => {
         </div>
       </div>
 
-      <Category title="ATS Compatability" score={feedback.ats_compatibility} />
+      {/* <Category title="ATS Compatability" score={feedback.ats_compatibility} /> */}
       <Category title="Content Quality" score={feedback.content_quality} />
       <Category title="Format & Design" score={feedback.format_and_design} />
     </div>
